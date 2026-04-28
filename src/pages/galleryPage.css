@@ -1,0 +1,237 @@
+.gallery-page {
+  min-height: 100vh;
+  padding: 120px 20px 48px;
+  background: var(--site-bg);
+}
+
+.gallery-shell {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+}
+
+.gallery-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  text-align: center;
+}
+
+.gallery-header p {
+  margin: 10px 0 0;
+  color: #d7e5fa;
+  text-align: center;
+}
+
+.gallery-menu {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 24px;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 22px 44px rgba(6, 16, 32, 0.32);
+}
+
+.gallery-menu-toggle-row {
+  margin-top: 22px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8px;
+}
+
+.gallery-menu-open-btn {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.16) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  color: #ffffff;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 14px 26px rgba(11, 95, 190, 0.22);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.gallery-menu-open-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 28px rgba(11, 95, 190, 0.28);
+}
+
+.gallery-menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.gallery-menu-kicker {
+  margin: 0 0 6px;
+  color: #9ec4ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.gallery-menu-top h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.35rem;
+}
+
+.gallery-menu-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.gallery-menu-close {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.gallery-menu-stats span {
+  color: #ffffff;
+  font-weight: 600;
+  background: rgba(11, 95, 190, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.gallery-menu-reset {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.gallery-menu-reset:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.gallery-menu > .gallery-filter-group {
+  margin-top: 18px;
+}
+
+.gallery-filters {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.gallery-filter-group {
+  margin-top: 0;
+}
+
+.gallery-filter-group h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.gallery-filter-btn {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.gallery-filter-btn.active {
+  background: linear-gradient(135deg, #0b5fbe 0%, #0a3f80 100%);
+  border-color: transparent;
+  box-shadow: 0 8px 18px rgba(11, 95, 190, 0.32);
+  transform: translateY(-1px);
+}
+
+.gallery-filter-btn:hover {
+  transform: translateY(-1px);
+}
+
+.gallery-grid {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-page {
+    padding: 104px 14px 28px;
+  }
+
+  .gallery-menu {
+    padding: 16px;
+  }
+
+  .gallery-menu-toggle-row {
+    margin-top: 18px;
+    padding-right: 4px;
+  }
+
+  .gallery-menu-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gallery-menu-stats {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery-filter-btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}

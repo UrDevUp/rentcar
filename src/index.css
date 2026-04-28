@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&family=Rajdhani:wght@500;600;700&family=Outfit:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+:root {
+  --site-bg: #13263f;
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit", "Segoe UI", sans-serif;
+  background: var(--site-bg);
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
+  text-align: center;
+}
